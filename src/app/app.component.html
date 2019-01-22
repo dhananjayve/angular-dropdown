@@ -1,0 +1,12 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<div id="color-dropdown">
+  <div class="wrapper-dropdown">
+	  <span (click)="toggleDropdown()"><span [ngStyle]="{background: spanColor}"></span>{{spanText}}</span>
+	  <ul class="dropdown" [ngClass]="dropshow" >
+		  <li *ngFor="let color of colors" (click)="setColor(color.hex, color.name, color.value)"><span [ngStyle]="{background: color.hex}"></span> {{color.name}}</li>
+	  </ul>
+  </div>
+</div>
